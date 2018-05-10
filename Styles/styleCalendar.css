@@ -1,0 +1,9 @@
+.help{
+    background: url(../Images/CSS/help.png) no-repeat center;
+    height: 13px;
+    width: 13px;
+    padding: 0px;
+    vertical-align: middle;
+    margin: 0px;
+    cursor: pointer;
+}

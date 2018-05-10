@@ -1,0 +1,409 @@
+/*Author: Andres Sandoval
+ * Date: May 2013
+ * email: andresandoval992@gmail.com
+ */
+
+body{
+    position: relative;        
+    background: url('../Images/CSS/background.png') repeat center;
+}
+
+@media print{
+    .noPrint{
+        visibility: hidden;
+    }
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.noButton{
+    border: none;
+    background: transparent;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/*<editor-fold defaultstate="collapsed" desc="Table">*/
+table{
+  border: 0px solid black;
+  border-spacing: 8px;
+  border-bottom-width: 1px;
+}
+
+table thead tr{
+  font-family: monospace;
+  font-size: 13px;
+}
+
+table thead tr th{
+  border-bottom: 2px solid #aaaaaa;
+  border-top: 1px solid black;
+  margin: 10px;
+  padding: 2px;
+  background-color: #cccccc;
+}
+
+table tr {
+  font-family:monospace;
+  color: black;
+  font-size:13px;
+  background-color: white;
+}
+
+table tr.odd {
+  background-color: #AAAAAA;
+}
+
+table tr td, th{
+  border-bottom: 1px solid #aaaaaa;
+  height: auto;
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold defaultstate="collapsed" desc="Page Header">*/
+
+.header{
+    position: relative;
+    background: url(../Images/CSS/Airplane.png) no-repeat left;
+    background-color: #2672EC;
+    height:48px;
+    width:100%;
+    border:0px solid #fff;
+    text-align: right;            
+    font-family:sans-serif;
+}
+
+.userImg{
+    vertical-align: middle;
+    margin: 0;
+    width: 48px;
+    height: 48px;
+}
+
+.userLink{ 
+    color: white;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.userConfigurationImage{    
+    vertical-align: middle;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.userType{
+    font-family:sans-serif;
+    font-size:12px;
+}
+
+.userCloseSession{
+    font-weight: bold;
+    color: #ff9999;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+/*</editor-fold>*/
+
+/*<editor-fold defaultstate="collapsed" desc="Menu and Body Menu">*/
+.menu{
+    position: relative;
+    background: #eeeeee;
+    padding: 5px;
+    border-radius: 6px;
+    vertical-align: middle;    
+    height: auto;
+}
+
+.menuItem{
+    background: #eeeeee;
+    width: auto;
+    height: 20px;
+    padding: 5px;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    font-family: monospace, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.menuItem:hover{
+    background: #cccccc;
+    border: 2px solid #ffffff;
+}
+.menuItem:active, .menuItem:visited{
+    background: #eeeeee;
+}
+
+
+.imgButton{
+    background: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-left: 5px;
+}
+.bodyMenu{
+    font-family: monospace, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    height: auto;
+    padding: 20px;
+    margin: 50px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.foot{
+    position: fixed;    
+    color: #888888;    
+    font-family: monospace;
+    font-size: 12px;   
+    width: 100%;
+    bottom: 5px;
+}
+input, select, option{
+    font-family: monospace, sans-serif;
+    font-size: 12px;
+}
+/*</editor-fold>*/
+
+/*<editor-fold defaultstate="collapsed" desc="Overlay - Overlay Window -Overlay Waiting">*/
+
+.overlay {
+    background: url(../Images/CSS/ligthDark.png) repeat;
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: table;
+}
+
+.waitingOverlay {
+    background: url(../Images/CSS/waiting.gif) no-repeat center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.windowOverlayContainer{
+    background: transparent;
+    display: table-cell;
+    vertical-align: middle;
+	text-align: center;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    z-index: 20;
+}
+
+.windowOverlay{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    display: inline-block;
+    z-index: 1000;
+    text-align: center;
+}
+
+.windowOverlayHeader{
+    background: #2672EC;
+    height: 27px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 1px;
+}
+
+.windowOverlayHeaderCloseButton{
+    background: url('../Images/CSS/close.png') no-repeat center;
+    width:25px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+    padding: 1px;
+    padding-right: 10px;
+}
+.windowOverlayHeaderText{
+    background: transparent;
+    float: right;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.windowOverlayBody{    
+    background: #ffffff;
+    border: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold defaultstate="collapsed" desc="LookUp seccion">*/
+.tableSearch{
+    border:1px;
+    width:100%;
+    height:20px;
+    text-align: center;
+}
+
+.result {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lookUpInputButtons{
+    width: auto;
+    height: auto;
+    margin: 0px;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.lookUpInput{
+    background-color: #ffffff;
+    text-align: left;
+    width: 40%;
+    height: 27px;
+    border: 2px solid #999999;
+    border-radius: 6px;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+
+.lookUpButtons{
+    background: transparent;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.button{
+    background:#bbbbbb;    
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius:6px;
+}
+
+.lookUpInputButtons:hover, .button:hover, .lookUpButtons:hover{
+    background: #cccccc;
+}
+
+.lookUpTable{
+   border-spacing: 0px;
+   border-bottom: none;   
+}
+
+.lookUpTableCell{
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: none;
+}
+
+.lookUpTableRow1{
+    background: #ffffff;
+}
+
+.lookUpTableRow0{
+    background: #eeeeee;
+}
+
+.lookUpTableRow0:hover, .lookUpTableRow1:hover{
+    background: #ddffee;
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold defaultstate="collapsed" desc="AJAX -- Validations and Views">*/
+
+.waiting{
+    background: url(../Images/CSS/waiting.gif) no-repeat center;
+    width: 100%;
+    height: 19px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.waitingSmall{
+    background: url(../Images/CSS/waitingSmall.gif) no-repeat center;
+    width: 16px;
+    height: 11px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.validValue{
+    background: url(../Images/CSS/validValue.png) no-repeat left;
+}
+
+.invalidValue{
+    background: url(../Images/CSS/invalidValue.png) no-repeat left;
+}
+
+.validValue, .invalidValue{
+    font-family: monospace;
+    font-weight: bold;
+    height: 11px;
+    width: auto;
+    padding-left: 18px;
+    padding-bottom: 3px;
+    text-align: left;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.cellDetail{
+    border: none;
+}
+
+/*</editor-fold>*/
